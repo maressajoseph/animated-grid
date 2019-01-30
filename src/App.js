@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+// Page
+import Page from './Page'
+
+// Styles
+import './styles'
+
+const pages = [
+  {
+    title: 'work',
+    images: [1, 2, 3, 4, 5, 6, 7]
+  },
+  {
+    title: 'about',
+    images: [8, 10, 9, 11, 1, 2, 12]
+  },
+  {
+    title: 'contact',
+    images: [4, 5, 12, 6, 8, 10, 3]
   }
-}
+]
 
-export default App;
+
+const App = () => (
+  <Fragment>
+    <Page pages={pages} />
+  </Fragment>
+)
+
+export default App
